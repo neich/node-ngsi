@@ -1,0 +1,39 @@
+{
+  "name": "node-ngsi",
+  "version": "0.0.1",
+  "description": "A generic library to build ngsi applications",
+  "main": "index.js",
+  "keywords": [
+    "ngsi",
+    "ioc",
+    "rest"
+  ],
+  "homepage": "http://github.com/neich/node-ngsi",
+  "author": "Ignacio Martín",
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neich/node-ngsi.git"
+  },
+  "private": true,
+  "dependencies": {
+    "express": "*",
+    "body-parser": "*",
+    "express-jwt": "*",
+    "coap": "*",
+    "htmlparser2": "*",
+    "pegjs": "*",
+    "nodi": "*",
+    "lodash": "*",
+    "jsonschema": "*",
+    "uuid": "*",
+    "bluebird": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/neich/node-ngsi/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC"
+}
