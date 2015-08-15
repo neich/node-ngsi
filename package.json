@@ -1,6 +1,6 @@
 {
   "name": "node-ngsi",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A generic library to build ngsi applications",
   "main": "index.js",
   "keywords": [
