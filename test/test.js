@@ -8,7 +8,6 @@
 
 var NGSI      = require('../')
   , nodi      = require('nodi')
-  , ngsiHandler        = require('../lib/handler/ngsi_handler')
   , http      = require('http')
   , common    = require('./common')
   , assert    = require('chai').assert
@@ -18,9 +17,8 @@ describe('request', function() {
 
   beforeEach(function () {
     ctx = nodi.createContext()
-    ctx.register('NGSI', ngsiHandler, {}).factory(di.factory.func)
+    ctx.register('NGSI', NGSI.createHandler, {}).factory(di.factory.func)
     ngsi = NGSI(ctx)
-    console.log('Starting test ...')
   })
 
   afterEach(function() {
