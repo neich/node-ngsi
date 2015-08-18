@@ -1,6 +1,6 @@
 {
   "name": "node-ngsi",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A generic library to build ngsi applications",
   "main": "index.js",
   "keywords": [
@@ -15,7 +15,16 @@
     "type": "git",
     "url": "https://github.com/neich/node-ngsi.git"
   },
-  "private": true,
+  "devDependencies": {
+    "bl": "*",
+    "sinon": "*",
+    "coap-packet": "*",
+    "pre-commit": "0.0.9",
+    "chai": "*",
+    "tape": "*",
+    "timekeeper": "0.0.4",
+    "nodi": "*"
+  },
   "dependencies": {
     "express": "*",
     "body-parser": "*",
