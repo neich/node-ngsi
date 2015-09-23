@@ -7,13 +7,15 @@ var handlerFactory = require('./lib/handler/ngsi_handler')
  *
  * @param ctx This is a dependency injection contex produces by nodi (https://www.npmjs.com/package/nodi)
  */
-var NGSI =  function (ctx) {
+var NGSI =  function () {
+
+  var ngsi = {}
+  ngsi.dependecies = "ngsiHandler=NGSIHandler"
 
   var app = express()
   app.use(bodyParser.json());
-  app.use(router(ctx))
+  app.use(router())
 
-  var ngsi = {}
 
   ngsi.start = function (port) {
     return new Promise(function (resolve, reject) {
@@ -28,9 +30,6 @@ var NGSI =  function (ctx) {
 
   }
 
-  ngsi.createHandler = function (impl) {
-    return handlerFactory(impl)
-  }
 
   return ngsi
 }
