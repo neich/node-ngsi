@@ -17,7 +17,8 @@ describe('request', function() {
 
   beforeEach(function () {
     ctx = nodi.createContext()
-    ctx.register('NGSI', NGSI.createHandler, {}).factory(di.factory.func)
+    ctx.register('NGSIHandler', NGSI.createHandler, {}).factory(di.factory.func)
+    ctx.initialize()
     ngsi = NGSI(ctx)
   })
 
@@ -37,7 +38,7 @@ describe('request', function() {
         var o = JSON.parse(res.data)
         assert.property(o, 'errorCode')
         assert.property(o.errorCode, 'code')
-        assert.equal(o.errorCode.code, '400')
+        assert.equal(o.errorCode.code, '500')
         done()
       })
   })
